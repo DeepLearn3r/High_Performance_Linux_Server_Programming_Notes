@@ -44,7 +44,7 @@ unsigned short int ntohs(unsigned short int netshort)； //host to net short
 
 **例如：**
 
-![sendpix0](/home/jimmy/桌面/linuxserver/img/sendpix0.jpg)
+![sendpix0](img/sendpix0.jpg)
 
 因此，在网络通信时，需要提前将主机字节序转化成网络字节序，这样通信就不会出错。
 
@@ -589,7 +589,7 @@ int setsockopt(int sockfd, int level, int option_name, const void* option_value,
 
 socket选项:
 
-![image-20210113232853974](/home/jimmy/桌面/linuxserver/img/image-20210113232853974.png)
+![image-20210113232853974](img/image-20210113232853974.png)
 
 
 
@@ -604,7 +604,7 @@ socket选项:
 
 强制使用被处于**TIME_WAIT状态**的连接占用的socket地址
 
-![image-20210113234039406](/home/jimmy/桌面/linuxserver/img/image-20210113234039406.png)
+![image-20210113234039406](img/image-20210113234039406.png)
 
 
 
@@ -673,7 +673,7 @@ struct hostent* gethostbyaddr(const void* addr, size_t len, int type);
   - 该函数通常先在本地的/etc/hosts配置文件中查找主机，如果没有找到，再去访问DNS服务器。
 - gethostbyaddr函数根据IP地址获取主机的完整信息；
 
-![image-20210128231102501](/home/jimmy/桌面/linuxserver/img/image-20210128231102501.png)
+![image-20210128231102501](img/image-20210128231102501.png)
 
 **注：函数均不可重入，可重入版本为在原函数名称尾部加上_r(re-entrant)。**
 
@@ -696,7 +696,7 @@ struct servent* getservbyport(int port, const char* proto);
 - getservbyport函数根据端口号获取某个服务的完整信息；
 - 上述两个函数都是通过**读取/etc/services文件**来获取服务的信息。
 
-![image-20210128231904999](/home/jimmy/桌面/linuxserver/img/image-20210128231904999.png)
+![image-20210128231904999](img/image-20210128231904999.png)
 
 **注：函数均不可重入，可重入版本为在原函数名称尾部加上_r(re-entrant)。**
 
@@ -715,7 +715,7 @@ struct servent* getservbyport(int port, const char* proto);
 int getaddrinfo(const char* hostname, const char* service, const struct addrinfo* hints, struct addrinfo** result);
 ```
 
-![image-20210128232558231](/home/jimmy/桌面/linuxserver/img/image-20210128232558231.png)
+![image-20210128232558231](img/image-20210128232558231.png)
 
 注：
 
@@ -723,11 +723,11 @@ int getaddrinfo(const char* hostname, const char* service, const struct addrinfo
 
 - ai_flags见下表
 
-  ![image-20210128232748964](/home/jimmy/桌面/linuxserver/img/image-20210128232748964.png)
+  ![image-20210128232748964](img/image-20210128232748964.png)
 
 - 在使用hints时，可以设置ai_flags，ai_family，ai_socktype和ai_protocol四个字段，其他字段必须设置为NULL。
 
-![image-20210128233030202](/home/jimmy/桌面/linuxserver/img/image-20210128233030202.png)
+![image-20210128233030202](img/image-20210128233030202.png)
 
 
 
@@ -745,9 +745,9 @@ int getaddrinfo(const char* hostname, const char* service, const struct addrinfo
 int getnameinfo(const struct sockaddr* sockaddr, socklen_t addrlen, char* host, socklen_t hostlen, char* serv, socklen_t servlen, int flags);
 ```
 
-![image-20210128233431787](/home/jimmy/桌面/linuxserver/img/image-20210128233431787.png)
+![image-20210128233431787](img/image-20210128233431787.png)
 
-![image-20210128233536205](/home/jimmy/桌面/linuxserver/img/image-20210128233536205.png)
+![image-20210128233536205](img/image-20210128233536205.png)
 
 
 
@@ -933,9 +933,9 @@ int munmap(void* start, size_t length);
 ssize_t splice(int fd_in, loff_t* off_in, int fd_out, loff_t* off_out, size_t len, unsigned int flags);
 ```
 
-![image-20210206234404159](/home/jimmy/桌面/linuxserver/img/image-20210206234404159.png)
+![image-20210206234404159](img/image-20210206234404159.png)
 
-![image-20210206234420312](/home/jimmy/桌面/linuxserver/img/image-20210206234420312.png)
+![image-20210206234420312](img/image-20210206234420312.png)
 
 注意：STDOUT_FILENO**以追加方式**打开，因此会报错
 
@@ -963,13 +963,13 @@ ssize_t tee(int fd_in, int fd_out, size_t len, unsigned int flags);
 int fcntl(int fd, int cmd, ...);
 ```
 
-![image-20210206234931030](/home/jimmy/桌面/linuxserver/img/image-20210206234931030.png)
+![image-20210206234931030](img/image-20210206234931030.png)
 
-![image-20210206234941512](/home/jimmy/桌面/linuxserver/img/image-20210206234941512.png)
+![image-20210206234941512](img/image-20210206234941512.png)
 
 小例子：
 
-![image-20210206235009612](/home/jimmy/桌面/linuxserver/img/image-20210206235009612.png)
+![image-20210206235009612](img/image-20210206235009612.png)
 
 
 
@@ -1072,9 +1072,9 @@ PGID - 进程组ID(Linux下每个进程隶属于一个进程组)
 
 ### 8.1.1 C/S模型
 
-![image-20210217164505109](/home/jimmy/桌面/linuxserver/img/image-20210217164505109.png)
+![image-20210217164505109](img/image-20210217164505109.png)
 
-![image-20210217165514901](/home/jimmy/桌面/linuxserver/img/image-20210217165514901.png)
+![image-20210217165514901](img/image-20210217165514901.png)
 
 c/s模型优点：
 
@@ -1087,17 +1087,17 @@ c/s模型优点：
 
 即peer to peer模型，让主机重新回归对等的地位
 
-![image-20210217170148357](/home/jimmy/桌面/linuxserver/img/image-20210217170148357.png)
+![image-20210217170148357](img/image-20210217170148357.png)
 
-![image-20210217170159602](/home/jimmy/桌面/linuxserver/img/image-20210217170159602.png)
+![image-20210217170159602](img/image-20210217170159602.png)
 
 ## 8.2 服务器编程框架
 
-![image-20210217170219918](/home/jimmy/桌面/linuxserver/img/image-20210217170219918.png)
+![image-20210217170219918](img/image-20210217170219918.png)
 
-![image-20210217170254665](/home/jimmy/桌面/linuxserver/img/image-20210217170254665.png)
+![image-20210217170254665](img/image-20210217170254665.png)
 
-![image-20210217170312599](/home/jimmy/桌面/linuxserver/img/image-20210217170312599.png)
+![image-20210217170312599](img/image-20210217170312599.png)
 
 ## 8.3 I/O模型
 
@@ -1113,7 +1113,7 @@ c/s模型优点：
 
 
 
-![image-20210218165402624](/home/jimmy/桌面/linuxserver/img/image-20210218165402624.png)
+![image-20210218165402624](img/image-20210218165402624.png)
 
 - 同步I/O（用户执行I/O操作）：
   1. 阻塞I/O，I/O复用以及信号驱动I/O都是同步I/O模型
@@ -1129,23 +1129,23 @@ c/s模型优点：
 
 ### 8.4.1 Reactor
 
-![image-20210218225452964](/home/jimmy/桌面/linuxserver/img/image-20210218225452964.png)
+![image-20210218225452964](img/image-20210218225452964.png)
 
-![image-20210218225300876](/home/jimmy/桌面/linuxserver/img/image-20210218225300876.png)
+![image-20210218225300876](img/image-20210218225300876.png)
 
 ### 8.4.2 Proactor模式
 
 **I/O操作**都交给**主线程和内核**来处理，工作线程只负责业务逻辑（更加符合框架）
 
-![image-20210218225612575](/home/jimmy/桌面/linuxserver/img/image-20210218225612575.png)
+![image-20210218225612575](img/image-20210218225612575.png)
 
 ### 8.4.3 模拟Proactor模式
 
 原理：主线程执行数据读写操作，读写完成之后，主线程向工作线程通知“事件完成”；工作线程则直接获得数据读写的结果，进行业务逻辑处理
 
-![image-20210218230053916](/home/jimmy/桌面/linuxserver/img/image-20210218230053916.png)
+![image-20210218230053916](img/image-20210218230053916.png)
 
-![image-20210218230111201](/home/jimmy/桌面/linuxserver/img/image-20210218230111201.png)
+![image-20210218230111201](img/image-20210218230111201.png)
 
 ## 8.5 两种高效的并发模式
 
@@ -1169,17 +1169,17 @@ c/s模型优点：
 1. 按照同步方式运行的线程称为同步线程，同步指的是完全按照代码序列的顺序执行，相当于逻辑单元
 2. 按照异步方式运行的线程称为异步线程，异步需要系统事件(中断, 信号)来驱动，相当于I/O事件
 
-![image-20210219004927023](/home/jimmy/桌面/linuxserver/img/image-20210219004927023.png)
+![image-20210219004927023](img/image-20210219004927023.png)
 
 - 服务器(需要较好的实时性且能同时处理多个客户请求)，一般使用同步线程和异步线程来实现,即为半同步/半异步模式
 - 同步线程 - 处理客户逻辑, **处理请求队列中的对象**
 - 异步线程 - 处理IO事件, 接收到客户请求后将其封装成请求对象并**插入请求队列**
 
-![image-20210219010132567](/home/jimmy/桌面/linuxserver/img/image-20210219010132567.png)
+![image-20210219010132567](img/image-20210219010132567.png)
 
 
 
-![image-20210219010533912](/home/jimmy/桌面/linuxserver/img/image-20210219010533912.png)
+![image-20210219010533912](img/image-20210219010533912.png)
 
 高效的半同步/半异步模式：
 
@@ -1195,11 +1195,11 @@ c/s模型优点：
 
 ### 8.5.2 半同步/半反应堆模式
 
-![image-20210219010219662](/home/jimmy/桌面/linuxserver/img/image-20210219010219662.png)
+![image-20210219010219662](img/image-20210219010219662.png)
 
 **异步线程由主线程来充当。**
 
-![image-20210219010452255](/home/jimmy/桌面/linuxserver/img/image-20210219010452255.png)
+![image-20210219010452255](img/image-20210219010452255.png)
 
 ### 8.5.3 领导者追随者模式
 
@@ -1320,9 +1320,9 @@ struct pollfd
 };
 ```
 
-![image-20210221164948893](/home/jimmy/桌面/linuxserver/img/image-20210221164948893.png)
+![image-20210221164948893](img/image-20210221164948893.png)
 
-![image-20210221164959563](/home/jimmy/桌面/linuxserver/img/image-20210221164959563.png)
+![image-20210221164959563](img/image-20210221164959563.png)
 
 **POLLRDHUP** 的使用需要在源文件文件最开始的部分，添加`#define _GNU_SOURCE`代码
 
@@ -1503,7 +1503,7 @@ int epoll_wait(int epfd, struct epoll_event* events, int maxevents, int timeout)
 
 ## 9.4 三组I/O复用函数的比较
 
-![image-20210228234729285](/home/jimmy/桌面/linuxserver/img/image-20210228234729285.png)
+![image-20210228234729285](img/image-20210228234729285.png)
 
 
 
@@ -1542,9 +1542,9 @@ typedef void(*__sighandler_t)(int);
 
 `#include <bits/signum.h>`
 
-![image-20210310224128938](/home/jimmy/桌面/linuxserver/img/image-20210310224128938.png)
+![image-20210310224128938](img/image-20210310224128938.png)
 
-![image-20210310224203127](/home/jimmy/桌面/linuxserver/img/image-20210310224203127.png)
+![image-20210310224203127](img/image-20210310224203127.png)
 
 
 
@@ -1608,7 +1608,7 @@ struct sigaction
 // sa_flags设置程序收到信号时的行为
 ```
 
-![image-20210310230745576](/home/jimmy/桌面/linuxserver/img/image-20210310230745576.png)
+![image-20210310230745576](img/image-20210310230745576.png)
 
 
 
@@ -1637,7 +1637,7 @@ int sigismember(const sigset_t* _set, int _signo);//测试_signo是否存在在_
 
 ### 10.3.2 进程信号掩码
 
-![image-20210310231449943](/home/jimmy/桌面/linuxserver/img/image-20210310231449943.png)
+![image-20210310231449943](img/image-20210310231449943.png)
 
 
 
@@ -1714,7 +1714,7 @@ int sigpending(sigset_t* set);
 
 p193-194
 
-![image-20210329143008785](/home/jimmy/桌面/linuxserver/img/image-20210329143008785.png)
+![image-20210329143008785](img/image-20210329143008785.png)
 
 
 
@@ -1811,7 +1811,7 @@ p205
 
 ### 11.4.1 时间轮
 
-![image-202103291548](/home/jimmy/桌面/linuxserver/img/image-202103291548.jpg)
+![image-202103291548](img/image-202103291548.jpg)
 
 1. 指针指向轮子上的一个**槽(slot)**；
 2. 指针以**恒定速度**转动，每转动一步就指向下一个槽，称为**一次嘀嗒(tick)**；
@@ -1892,7 +1892,7 @@ pid_t fork(void);
 
 exec系统调用**直接替换**当前进程映像
 
-![image-202103291646](/home/jimmy/桌面/linuxserver/img/image-202103291646.jpg)
+![image-202103291646](img/image-202103291646.jpg)
 
 
 
@@ -1929,7 +1929,7 @@ pid_t waitpid(pid_t pid, int* stat_loc, int options);
 
 
 
-![image-202103291946](/home/jimmy/桌面/linuxserver/img/image-202103291946.jpg)
+![image-202103291946](img/image-202103291946.jpg)
 
 
 
@@ -1963,7 +1963,7 @@ semget用于**创建信号量集**，则与之相关的内核数据结构体**se
 
 
 
-![image-202103292230](/home/jimmy/桌面/linuxserver/img/image-202103292230.jpg)
+![image-202103292230](img/image-202103292230.jpg)
 
 
 
@@ -1973,7 +1973,7 @@ semop系统调用改变信号量的值，即执行P、V操作。
 
 semop对信号量的操作实际上是对这些内核变量的操作，与semop相关的内核变量如下：
 
-![image-202103292233](/home/jimmy/桌面/linuxserver/img/image-202103292233.jpg)
+![image-202103292233](img/image-202103292233.jpg)
 
 
 
@@ -1995,9 +1995,9 @@ struct sembuf
 };
 ```
 
-![image-202103301521](/home/jimmy/桌面/linuxserver/img/image-202103301521.jpg)
+![image-202103301521](img/image-202103301521.jpg)
 
-![image-202103301522](/home/jimmy/桌面/linuxserver/img/image-202103301522.jpg)
+![image-202103301522](img/image-202103301522.jpg)
 
 
 
@@ -2018,11 +2018,11 @@ union semun
 };
 ```
 
-![image-202103301530](/home/jimmy/桌面/linuxserver/img/image-202103301530.jpg)
+![image-202103301530](img/image-202103301530.jpg)
 
-![image-202103301531](/home/jimmy/桌面/linuxserver/img/image-202103301531.jpg)
+![image-202103301531](img/image-202103301531.jpg)
 
-![image-202103301533](/home/jimmy/桌面/linuxserver/img/image-202103301533.jpg)
+![image-202103301533](img/image-202103301533.jpg)
 
 ### 13.5.5 特殊键值IPC_PRIVATE
 
@@ -2151,7 +2151,7 @@ void pthread_exit(void* retval);
 int pthread_join(pthread_t thread, void** retval);
 ```
 
-![image-202103301717](/home/jimmy/桌面/linuxserver/img/image-202103301717.jpg)
+![image-202103301717](img/image-202103301717.jpg)
 
 
 
@@ -2193,21 +2193,21 @@ p273
 
 ## 14.4 POSIX信号量
 
-<img src="/home/jimmy/桌面/linuxserver/img/image-202103301926.jpg" alt="image-202103301926" style="zoom:80%;" />
+<img src="img/image-202103301926.jpg" alt="image-202103301926" style="zoom:80%;" />
 
 
 
 ## 14.5 互斥锁
 
-<img src="/home/jimmy/桌面/linuxserver/img/image-202103301935.jpg" alt="image-202103301935" style="zoom:80%;" />
+<img src="img/image-202103301935.jpg" alt="image-202103301935" style="zoom:80%;" />
 
 
 
 ## 14.6 条件变量
 
-<img src="/home/jimmy/桌面/linuxserver/img/image-202103301937.jpg" alt="image-202103301937" style="zoom:80%;" />
+<img src="img/image-202103301937.jpg" alt="image-202103301937" style="zoom:80%;" />
 
-<img src="/home/jimmy/桌面/linuxserver/img/image-202103301938.jpg" alt="image-202103301938" style="zoom:80%;" />
+<img src="img/image-202103301938.jpg" alt="image-202103301938" style="zoom:80%;" />
 
 1. 注意，为了保证pthread_cond_wait的**原子性**（即保证该函数开始执行时到其调用线程被放入条件变量的等待队列之间的这段时间内，pthread_cond_signal函数或者pthread_cond_broadcast函数不会修改条件变量），在使用前必须加锁；
 2. 然后pthread_cond_wait将调用线程放入请求队列，然后将互斥锁解锁；
