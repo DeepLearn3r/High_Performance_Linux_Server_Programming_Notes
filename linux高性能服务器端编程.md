@@ -1,27 +1,3 @@
-# 总结头文件
-
-## 5章
-
-### \<netinet/in.h>
-
-#### 字节序转换
-
-```c++
-#include <netinet/in.h>
-unsigned long int htonl(unsigned long int hostlong); //host to net long
-unsigned short int htons(unsigned short int hostshort)； //host to net short
-unsigned long int ntohl(unsigned long int netlong); //host to net long
-unsigned short int ntohs(unsigned short int netshort)； //host to net short
-```
-
-
-
-
-
-
-
-
-
 # 5 linux 网络编程基础API
 
 
